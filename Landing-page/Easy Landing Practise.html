@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" user-scalable=yes>
+	<title></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+   
+
+
+
+
+<style type="text/css">
+
+   html {
+    overflow-x: hidden;
+   }
+   a {
+        font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 17px;
+line-height: 18px;
+  cursor: pointer;
+   }
+
+  nav.two a:hover {
+      color: rgba(0, 0, 0, 0.5);
+      
+   }
+
+   body {
+     background-color: #F1F1F1;
+     overflow-x: hidden;
+   }
+
+.flex {
+         display: flex;
+
+}
+
+   button {
+      border: 1px solid black;
+      border-radius: 5px;
+   }
+
+   div.one {
+    background-color: #D8BF95;
+    height: 50px;
+   }
+
+   div.one p {
+      position: relative;
+      top: 20%;
+   }
+
+   @media screen and (max-width: 400px) {
+      div.one p {
+         top: 10%;
+         font-size: 95%;
+      }
+
+      div.one {
+         height: 30px;
+      }
+   }
+
+
+
+
+   nav.two a {
+     color: black;
+     height: 18px;
+text-transform: uppercase;
+      position: relative; 
+      margin-top: 12px;
+top: 50%;
+text-decoration: none;
+   }
+
+
+   a.name_site {
+      margin: 10px;
+      text-decoration: none;
+      font-size: 200%;
+   }
+
+
+
+div.languages a:active {
+   color: #C4C4C4;
+}
+
+
+
+
+.languages-btn {
+  background-color: lightgrey;
+  width: 35px;
+  height: 35px;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+}
+
+
+
+/* Dropdown button on hover & focus */
+.languages-btn:hover, .languages-btn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.languages-main {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  max-width: 35px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+#languages-content {
+  display: none;
+  position: relative;
+  background-color: whitesmoke;
+    z-index: 10000;
+
+    box-shadow: 2px 2px 2px 2px grey;
+    border: 0.5px solid grey;
+    border-radius: 5px;
+}
+
+/* Links inside the dropdown */
+#languages-content a {
+  text-decoration: none;
+  display: block;
+  margin: 10px 5px 10px 5px;
+
+}
+
+
+#languages-content a:hover {background-color: grey;}
+
+
+.show {display:block;}
+
+
+
+#sidenav {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 1s;
+
+  z-index:3000;
+  background-color: white;
+}
+
+#sidenav div h2 {
+   vertical-align: center;
+   position: relative;
+   top: 10px;
+}
+
+#sidenav a {
+   text-decoration: none;
+      font-size: 130%;
+}
+
+div.sidenav #sidenav div div.flex div.col-6 a {
+    margin-top: 10px;
+}
+
+
+
+
+
+
+nav.two div button {
+     background-color: lightgrey;
+    width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+button.close {
+   cursor: pointer; 
+   font-size: 160%; 
+   padding-right: 20px;
+   height: 50px;
+   margin-top: 5px;
+   margin-left: 20px;
+}
+
+div.stimulus {
+   padding: 30px;
+}
+
+div.stimulus p {
+           font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+}
+
+
+
+
+div.newArrivals {
+   padding-top: 70px;
+}
+
+div.products {
+   padding-top: 50px;
+}
+
+
+  div.products div {
+    flex: 33%;
+  overflow: hidden;
+
+}
+
+div.products div img {
+     margin-top: 8px;
+  vertical-align: middle;
+  width: 75%;
+}
+
+
+   div.buy {
+      background-color: lightgrey;
+            position: relative;
+            left: 10%;
+}
+
+
+
+div.buy input {
+   border: none;
+   background-color: greenyellow;
+}
+
+a.price {
+      position: relative;
+   top: 5px;
+   vertical-align: middle;
+   text-decoration: none;
+}
+
+
+
+/* On smaller screens, decrease text size */
+@media screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+@media screen and (max-width: 700px) {
+
+
+  div.products_item {
+    flex: 100%;
+    max-width: 100%;
+      width: 100%;
+  position: relative;
+  }
+
+div.extra {
+  display: none;
+}
+
+.mySlides {
+   display: none;
+}
+
+.mySlides img{
+      max-width: 90%;
+   width: 90%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+}
+
+
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
+   .images_mittel_block, .books_block, .ring_demonstration_block {
+
+  width: 700px;
+  max-width: 700px;
+   height: 400px;
+   max-height: 400px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.images_mittel, .books, .ring_demonstration {
+      overflow: hidden;
+        width: 700px;
+  max-width: 700px;
+}
+
+.images_mittel img, .books img, .ring_demonstration img {
+   width: 100%;
+   height: 100%;
+     overflow: hidden;
+}
+
+.animate {
+  transform: translate(-40%);
+  transition-property: transform;
+  transition-duration: 5s;
+  transition-timing-function: linear;
+}
+
+.animate1 {
+  transform: translate(0%);
+  transition-property: transform;
+  transition-duration: 5s;
+  transition-timing-function: linear;
+}
+
+
+
+
+
+}
+
+
+.subscribe_slogan {
+   border-bottom: 1px solid white;
+    vertical-align: bottom;
+    position: relative;
+    top: 40%;
+}
+
+
+
+@media screen and (min-width: 701px) {
+
+img {
+   vertical-align: middle;
+   max-width: 100%;
+}
+
+div.extra {
+  margin-top: 40px;
+   display: block;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+div.products {
+   /* Slideshow container */
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  max-width: 33%;
+}
+
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 33%;
+  text-align: center;
+}
+
+
+
+.active {
+  background-color: #717171;
+}
+
+}
+
+
+div.footer_main a {
+   text-decoration: none;
+}
+
+
+div.catalog_main {
+   box-shadow: 2px 2px red;
+}
+
+
+
+
+
+
+
+
+.catalog_content div img {
+   min-width: 100%;
+   max-width: 100%;
+}
+
+.catalog_content div {
+   max-height: 549px;
+}
+
+
+
+
+
+.overlay {
+   position: relative;
+
+    width: 100%;
+    bottom: 20%;
+    opacity: 1;
+    height: 20%;
+      background: rgba(0, 0, 0, 0.5); /* Black see-through */
+}
+
+.catalog_content div.col-4 {
+       margin: 1%;
+}
+
+.catalog_content div.col-4:hover {
+       box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.overlay span {
+       margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%); 
+        font-size: 150%;
+}
+
+
+@media screen and (max-width: 500px) {
+   .overlay span{
+      font-size: 120%;
+   }
+}
+
+
+
+
+
+</style>
+
+</head>
+<body>
+
+<div class="for_opacity_back">
+	
+
+<header>
+
+<div class="container-fluid one font-weight-bold text-center"><p>Free shopping on orders over $150 over Canada</p></div>
+
+
+<nav class="container-fluid two text-decoration-none pt-3 my-3 text-center flex" role='navigation in header'>
+    <div class="col-1" title="side navigation"><button class="col-1" onclick='sidenav();'><span class="company" style="font-size: 120%;">&#9776;</span></button></div>
+    <a href="#" style="width: 8%;">Shop By</a>
+    <a href="#" style="width: 16%;">Collections</a>
+    <a href="#" style="width: 33%;" class="name_site">MYEL</a>
+    <a href="#" style="width: 16%;">About us</a>
+    <a href="#" style="width: 8%;" class="text-right">Login</a>
+
+      <div class="languages-main">
+  <button onclick="languages()" class="languages-btn text-center text-black">Ru</button>
+  <div id="languages-content">
+    <a href="#">Ru</a>
+    <a href="#">En</a>
+  </div>
+</div>
+ 
+
+
+</nav>
+
+</header>
+
+
+</div>
+
+
+<sidenav role='side navigation main'>
+<div id="sidenav" role='side navigation content'>
+    <div class="flex">
+      <h2 class="col-9 text-center">Full Menu</h2>
+   <button class="col-2 close tabindex" onclick="document.getElementById('sidenav').style.width = '0px';"><span onclick="close_opacity();">&#10006;</span></button>
+</div>
+
+
+
+<div style="margin: 10px;">
+
+<p class="text-center col-9 tabindex"><a class="name_site" style="color: lightblue;">MYEL</a></p>
+
+<div class="flex">
+
+<div class="col-6">
+  <a href="#" class="tabindex">Shop By</a>   
+  <a href="#" class="tabindex">Collections</a>  
+</div>
+
+<div class="col-6">
+  <a href="#" class="tabindex">About us</a> 
+  <a href="#" class="tabindex">Login</a>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+</sidenav>
+
+
+
+<main>
+
+<div class="for_opacity_back" role='opacity body when sidenav open'>
+
+
+
+<div class="slideshow-container text-center flex" role='slides header'>
+
+<div class="mySlides col-4">
+
+  <img src="Rectangle.png" alt="Women with ring">
+
+</div>
+
+<div class="mySlides col-4">
+  <img src="Rectangle (1).png" alt="Ring on a tree">
+
+</div>
+
+<div class="mySlides col-4">
+
+  <img src="Rectangle (2).png" alt="Necklace on a woman">
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<article role='stimulus'>
+
+<div class="after-pictures flex">
+<div class="stimulus col-6">
+    <p class="h1">Responsible high-end jewelry made in Montreal. MYEL creations are designed to stand the test of time.</p>
+
+    <p class="h6">Spontaneous, delicate, audacious, our jewels distinguish themselves with their elegance.</p>
+</div>
+
+<div class="col-5 text-end extra">
+   <p>Shop MYEL</p>   
+</div>
+
+
+</div>
+
+</article>
+
+
+
+
+
+
+<article role='new products'>
+
+<div class="newArrivals">
+   <h3 style="margin-left: 10px;">SHOP NEW ARRIVALS</h3>
+
+
+<div class="products text-center flex">
+
+    <div class="first products-item col-3">
+      <h5>Stein Necklace in Silver</h5>
+      <img src="Stein Necklace.png" alt="Stein necklace" style="height: 450px;">
+
+   <div class="col-12 buy flex">
+      <a href="#" class="price col-4">$310 CAD</a>
+      <input type="button" name="buy" value="Shop now" class="col-8">
+   </div>
+
+   </div>
+
+   <div class="second products-item col-3">
+      <h5>Gold Ring</h5>
+      <img src="image2.png" alt="Gold ring" style="height: 450px;">
+
+   <div class="col-12 buy flex">
+      <a href="#" class="price col-4">$350 CAD</a>
+      <input type="button" name="buy" value="Shop now" class="col-8">
+   </div>
+
+   </div>
+
+   <div class="third products-item col-3">
+      <h5>Origines Pendart in Yellow Gold</h5>
+      <img src="Origines Pendant.png" alt="Pendart" style="height: 450px;">
+
+       <div class="col-12 buy flex">
+      <a href="#" class="price col-4">$280 CAD</a>
+      <input type="button" name="buy" value="Shop now" class="col-8">
+   </div>
+
+   </div>
+
+</div>
+</div>
+
+</article>
+
+
+<article role='T-shirt demonstration'>
+
+<div id="images_mittel_block">
+<div class="flex images_mittel" id="images_mittel" style="margin-top: 100px;">
+     <div class="col-6">
+   <img src="image_mittel.png" alt="">
+     </div>
+
+     <div class="col-6">
+   <img src="image_mittel_1.png" alt="">
+     </div>
+</div>
+</div>
+
+</article>
+
+
+
+<article role='catalog'>
+
+<div class="catalog-main" style="margin-top: 100px;">
+   <h3 style="margin-left: 10px;">Browse by categories</h3>
+
+
+<div class="catalog_content flex text-center" role='catalog content' style="margin-top: 30px; margin-left: 12%; margin-right: 12%; vertical-align: middle;">
+
+ 
+      <div class="col-4" tabindex="0">
+      <img src="Brangle.png" alt="Brangles" class="col-12">
+         <div class="overlay text-center text"><span class="text-white">Brangles</span></div>
+
+      </div>
+
+       <div class="col-4" tabindex="0">
+      
+      <img src="Earring.png" alt="Earrings" class="col-12">
+         <div class="overlay text text-white text-center"><span class="text-white">Earrings</span></div>
+
+      </div>
+
+       <div class="col-4" tabindex="0">
+      
+      <img src="Ring.png" alt="Rings" class="col-12">
+         <div class="overlay text text-white text-center"><span class="text-white">Rings</span></div>
+
+      </div>
+
+
+</div>
+
+
+</div>
+
+</article>
+
+
+
+
+<article role='books demonstration'>
+
+<div class="books_block">
+<div class="container-fluid flex books" id="books" style="padding: 30px, 30px, 30px, 30px;">
+   <div class="col-6">
+      <img src="Book1.png" alt="Book">
+   </div>
+
+   <div class="col-6">
+      <img src="Book2.png" alt="Book">
+   </div>
+</div>
+</div>
+
+</article>
+
+
+<article role='way create'>
+
+<div class="way_create_main" style="margin: 100px 30px 30px 30px;">
+   <h3 class="col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">Together, we can build a brighter tomorrow. We use ethical stones and the most eco-responsible raw material possible.</h3>
+
+<div class="way_create_content flex" style="margin: 40px;">
+   <div class="col-4">
+
+      <div><img src="Way_create_1.png" alt=""></div>
+       <p class="p-3 my-3" style="font-size: 150%;">01</p>
+        <p>Our jewelry is designed and produced locally in Montreal.</p>
+   </div>
+
+
+   <div class="col-4">
+      <div><img src="Way_create_2.png" alt=""></div>
+       <p class="p-3 my-3" style="font-size: 150%;">02</p>
+        <p>MYEL is a member of the Ethical Metalsmith Association.</p>
+   </div>
+
+
+   <div class="col-4">
+      <div><img src="Way_create_3.png" alt=""></div>
+       <p class="p-3 my-3" style="font-size: 150%;">03</p>
+        <p>We create high end jewelry, designed to stand the test of time.</p>
+   </div>
+
+   </div>
+
+</div>
+
+</article>
+
+
+
+
+
+
+
+
+
+
+<article role='ring demonstration'>
+
+<div class="ring_demonstration_block">
+<div class="ring_demonstration flex text-center" id="ring_demonstration">
+   <div class="col-6">
+      <img src="Ring_demonstration_1.png" alt="ring">
+   </div>
+
+   <div class="col-6">
+      <img src="Ring_demonstration_2.png" alt="ring">
+   </div>
+</div>
+</div>
+
+</article>
+
+
+
+
+
+
+
+
+
+<article role='subscribe'>
+
+<div class="subscribe_block container-fluid text-white" style='background: url(subscribe.png); height: 500px;'>
+
+<div class="container-fluid text-center flex" style="padding-top: 100px; margin-top: 50px;">
+   <p class="col-4">Exceptional Quality</p>
+    <p class="col-4">Fair Price</p>
+     <p class="col-4">Exceptional Quality</p>
+</div>
+
+
+
+<div class="subscribe_slogan col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+
+   <h2>Subscribe to our newsletter.</h2>
+   <p style="font-size: 140%;">Receive exclusive news and special promo codes.</p>
+
+
+</div>
+</div>
+
+</article>
+
+
+</main>
+
+
+
+
+
+
+
+<footer role='all main links in footer'>
+
+<div class="footer_main container-fluid" style="padding: 100px 30px 30px 30px;">
+ 
+ <div class="footer_part flex">
+   <div class="shop_by col-6">
+         <h4>Shop By</h4>
+
+<div class="footer_list_shop_by flex">
+   <div class="col-3 shop_by_first_part">
+         
+            <p><a href="#">Necklaces</a></p>
+            <p><a href="#">Earrings</a></p>
+            <p><a href="#">Best Sellers</a></p>
+         
+      </div>
+
+      <div class="col-3 shop_by_second_part">
+         
+            <p><a href="#">Rings</a></p>
+            <p><a href="#">Bracelets</a></p>
+            <p><a href="#">New Arrivals</a></p>
+         
+      </div>
+
+   </div>
+</div>
+
+   <div class="support col-2">
+         <h4>Support</h4>
+            <p><a href="#">Product Care</a></p>
+            <p><a href="#">Returns, shipping & pricing</a></p>
+            <p><a href="#">FAQ</a></p>
+</div>
+
+      <div class="col-2 info_myel">
+         <h4>MYEL</h4>
+            <p><a href="#">About</a></p>
+            <p><a href="#">Journal</a></p>
+            <p><a href="#">Ethical Stones</a></p>
+            <p><a href="#">Terms & Privacy</a></p>
+      </div>
+
+
+         <div class="col-2 visit">
+         <h4>Visit</h4>
+            <p><a href="#">The Store</a></p>
+            <p><a href="#">Contact</a></p>
+      </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <div class="flex footer_part" style="margin-top: 50px;">
+
+
+
+
+<div class="col-5 footer_part_first flex">
+
+
+<div class="social_footer col-4">
+      <h4>Social</h4>
+
+      <a href="#"><img src="instagram.png" style="width: 40px; height: 40px;" alt=""></a>
+      <a href="#"><img src="facebook.png" style="width: 40px; height: 40px;" alt=""></a>
+</div>
+
+<div class="languages_footer col-5" style="vertical-align: middle; position: relative; top: 25%;">
+
+   <a href="#" style="border-right: 3px solid black; padding: 10px;">En</a>
+   <a href="#" style="padding: 10px;">Ru</a>
+
+</div>
+
+</div>
+
+
+<div class="col-6 footer_part_second flex" style="margin-top: 20px;">
+
+   <p class="col-9">All rights reserwed. 2021 - MYEL</p>
+   <p class="col-3">Web Credits</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</footer>
+
+
+
+
+<script type="text/javascript">
+
+   
+      let header_menu = document.getElementsByTagName('a');
+      console.log(header_menu);
+
+      let parent_header_menu = header_menu.parentNode;
+
+ 
+
+      if (window.innerWidth <= 700) {
+
+         header_menu[0].remove();    // Shop By
+ 
+         header_menu[3].remove();     // Login
+ 
+            header_menu[0].remove();   // Collections
+
+ 
+   header_menu[1].remove();
+
+
+
+
+   for(let i = 0; i < header_menu.length; i++) {
+      console.log(header_menu[i]);
+   }
+
+
+
+
+         header_menu[0].style.width = '79%';
+
+ 
+
+
+
+
+
+
+
+let slideIndex = 0;
+let slideIndex_products = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let products_slides = document.getElementsByClassName("products-item");
+
+
+
+  for (i = 0; i < slides.length; i++) {
+
+   slides[i].classList.add('fade');
+   slides[i].classList.remove('col-4');
+   slides[i].classList.add('col-12');
+    slides[i].style.display = "none";
+
+    products_slides[i].classList.add('fade');
+   products_slides[i].classList.remove('col-3');
+   products_slides[i].classList.add('col-12');
+    products_slides[i].style.display = "none";
+
+
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+         slideIndex = 1;
+      };    
+  
+    slides[slideIndex-1].style.display = "block"; 
+
+
+
+  slideIndex_products++;
+  if (slideIndex_products > products_slides.length) {
+   slideIndex_products = 1;
+};
+
+  products_slides[slideIndex_products-1].style.display = "block"; 
+
+
+
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+};
+
+
+
+
+
+
+
+
+
+
+let stimulus = document.getElementsByClassName("stimulus");
+
+
+stimulus[0].classList.remove('col-6');
+stimulus[0].classList.add('col-12', 'text-center');
+
+
+
+
+
+
+
+
+/*
+let products_buy = document.getElementsByClassName('buy');
+console.log(products_buy.style.position);
+
+products_buy.style.position = relative;
+
+console.log(products_buy);
+*/
+
+
+
+
+
+
+
+
+
+let counter = 0;
+
+
+  function d() {
+
+  images_mittel.classList.add('animate');
+  books.classList.add('animate');
+  ring_demonstration.classList.add('animate');
+
+
+  setTimeout(function dt() {
+    images_mittel.classList.remove('animate');
+    images_mittel.classList.add('animate1');
+
+    books.classList.remove('animate');
+    books.classList.add('animate1');
+
+    ring_demonstration.classList.remove('animate');
+    ring_demonstration.classList.add('animate1');
+
+  }, 5000+counter); 
+
+ setTimeout(function dty() {
+    images_mittel.classList.add('animate');
+    images_mittel.classList.remove('animate1');
+
+     books.classList.add('animate');
+    books.classList.remove('animate1');
+
+    ring_demonstration.classList.add('animate');
+    ring_demonstration.classList.remove('animate1');
+
+
+  }, 10000+counter);
+  
+
+counter += 10005;
+
+};
+
+
+setInterval(d, 0);
+
+
+
+
+
+
+
+
+
+function way_create_mobile() {
+let way_create_main_title = document.getElementsByClassName('way_create_main')[0].childNodes[1];
+
+
+way_create_main_title.classList.add('text-center');
+
+
+let way_create_content = document.getElementsByClassName('way_create_content')[0].childNodes;
+
+
+for(let i = 1; i < 6; i += 2) {
+
+   way_create_content[i].style.display = "none";
+
+   way_create_content[i].classList.remove('col-4');
+way_create_content[i].classList.add('col-8');
+
+let way_create_item_describe = way_create_content[i].childNodes[5];
+
+
+
+way_create_item_describe.classList.add('text-center');
+
+
+let way_create_item_photo = way_create_content[i].childNodes[1];
+
+way_create_item_photo.classList.add('text-center');
+
+
+
+}
+
+
+
+
+let back = document.createElement('a');
+let next = document.createElement('a');
+
+back.classList.add('col-2');
+next.classList.add('col-2');
+
+back.innerHTML = '<img src="to_left.png">';
+
+next.innerHTML = '<img src="to_right.png">';
+
+
+back.childNodes[0].style.position = 'relative';
+back.childNodes[0].style.top = '50%';
+
+next.childNodes[0].style.position = 'relative';
+next.childNodes[0].style.top = '50%';
+
+
+
+
+let parent_way_create_content = way_create_content[1].parentNode;
+
+parent_way_create_content.style.margin = '40px 0px 40px 0px';
+
+
+let parent_way_create_main = parent_way_create_content.parentNode;
+
+
+parent_way_create_main.style.margin = '100px 0px 30px 0px';
+
+
+document.querySelector('.way_create_content').prepend(back);
+
+document.querySelector('.way_create_content').append(next);
+
+// 1 блок блока "way_create"
+let count = 2;
+way_create_content[count].style.display = 'block';
+
+
+
+
+const next_click = next.addEventListener('click', function(){
+   
+   if(count < 6) {
+    way_create_content[count].style.display = 'none';
+    way_create_content[count + 2].style.display = 'block';
+    count += 2;
+} else {
+
+  count = 2;
+      way_create_content[count + 4].style.display = 'none';
+   way_create_content[count].style.display = 'block';
+}
+
+});
+
+const back_click = back.addEventListener('click', function(){
+   
+   if(count > 2) {
+    way_create_content[count].style.display = 'none';
+    way_create_content[count - 2].style.display = 'block';
+    count -= 2;
+} else {
+
+   count = 6;
+   way_create_content[count - 4].style.display = 'none';
+   way_create_content[count].style.display = 'block';
+}
+
+});
+
+        };
+
+
+
+
+way_create_mobile();
+
+
+
+
+
+    let footer_main = document.getElementsByClassName('footer_main')[0];
+
+    console.log(footer_main);
+
+function shop_by() {
+       let shop_by_main = document.getElementsByClassName('shop_by')[0];
+
+   let shop_by_first_part = document.getElementsByClassName('shop_by_first_part')[0];
+
+
+   let shop_by_second_part = document.getElementsByClassName('shop_by_second_part')[0];
+
+   
+    footer_main.classList.add('text-center');
+
+shop_by_first_part.append(shop_by_second_part);
+
+shop_by_first_part.classList.remove('col-3');
+shop_by_first_part.classList.add('col-12');
+
+shop_by_second_part.classList.remove('col-3');
+shop_by_second_part.classList.add('col-12');
+
+
+shop_by_main.classList.remove('col-6');
+shop_by_main.classList.add('col-3');
+
+
+};
+
+shop_by();
+
+
+
+function change_col_footer_mobile() {
+   let footer_part = document.getElementsByClassName('footer_part')[0].childNodes;
+
+   console.log(footer_part);
+
+   for(let r = 3; r < 8; r += 2) {
+          footer_part[r].classList.remove('col-2');
+          footer_part[r].classList.add('col-3');
+   }
+
+    footer_main.style.padding = '100px 0px 30px 0px';
+    footer_main.style.margin = '0px 0px 0px 5px';
+   
+}
+
+change_col_footer_mobile();
+
+
+
+function footer_end() {
+   let footer_part_first = document.getElementsByClassName('footer_part_first');
+   let footer_part_second = document.getElementsByClassName('footer_part_second');
+
+
+   footer_part_first[0].childNodes[3].remove();
+
+   footer_part_first[0].classList.remove('col-5');
+    footer_part_first[0].classList.add('col-6');
+
+   footer_part_first[0].childNodes[1].classList.remove('col-4');
+    footer_part_first[0].childNodes[1].classList.add('col-12');
+
+   footer_part_second[0].childNodes[3].remove();
+
+     footer_part_second[0].childNodes[1].classList.remove('col-9');
+    footer_part_second[0].childNodes[1].classList.add('col-12');
+
+
+    const div_end = document.createElement('div');
+
+    footer_main.append(div_end);
+
+
+
+   div_end.classList.add('flex');
+   div_end.style.margin = '30px 0px 0px 0px';
+
+
+    div_end.innerHTML = `<div class="languages_footer col-6" style="vertical-align: middle;">
+   <a href="#" style="border-right: 3px solid black; padding: 10px;">En</a>
+   <a href="#" style="padding: 10px;">Ru</a>
+</div>
+   <p class="col-6">Web Credits</p>
+`;
+
+
+};
+
+footer_end();
+
+
+
+
+     };
+
+// Тут заканчивается оптимизация под телефоны
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+     function languages() {
+
+  let drop = document.getElementById("languages-content");
+
+  if (drop.style.display === 'block') {
+    drop.style.display = 'none';
+  } else {
+   drop.style.display = 'block';
+  }
+
+}
+
+
+
+
+
+
+function sidenav() {
+   document.getElementById('sidenav').style.width = '300px';
+
+   for(let y = 0; y < 2; y++) {
+   let for_opacity_back = document.getElementsByClassName('for_opacity_back')[y];
+   for_opacity_back.style.opacity = '0.5';
+}
+}
+
+
+function close_opacity() {
+      for(let y = 0; y < 2; y++) {
+   let for_opacity_back = document.getElementsByClassName('for_opacity_back')[y];
+   for_opacity_back.style.opacity = '1';
+}
+
+}
+
+
+
+
+
+   </script>
+
+</body>
+</html>
